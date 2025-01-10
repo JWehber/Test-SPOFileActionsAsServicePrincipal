@@ -67,7 +67,7 @@ Start-Sleep -Seconds 1
 
 #delte old file
 if (Test-Path $pathFileFromDownload) {
-    Write-Output "Delte old file '$($pathFileFromDownload)'"
+    Write-Output "Delete old file '$($pathFileFromDownload)'"
     Remove-Item $pathFileFromDownload
 }
 
