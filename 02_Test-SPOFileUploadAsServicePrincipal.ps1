@@ -116,7 +116,7 @@ while ($fileLength -gt ($end + 1)) {
     Write-Output "bytes $start-$end/$fileLength | Index: $index and ChunkSize: $partSizeBytes"
     Invoke-WebRequest -Method Put -Uri $uploadSession.uploadUrl -Body $body -Headers $headers -SkipHeaderValidation | Out-Null
     $index++
-    Write-Output "Percentage Complete: $([Math]::Ceiling($index/$maxloops*100)) %"
+    Write-Output "Percentage Completed: $([Math]::Ceiling($index/$maxloops*100)) %"
 }
 
 #endregion upload file
