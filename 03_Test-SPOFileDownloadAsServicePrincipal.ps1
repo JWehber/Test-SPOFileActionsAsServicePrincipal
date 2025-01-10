@@ -79,6 +79,6 @@ Write-Output "Get Download URI for: $fileUri"
 $downloadUrl = ((Invoke-WebRequest -Method Get -Headers $header -Uri $fileUri -ContentType 'multipart/form-data').Content | ConvertFrom-Json).'@microsoft.graph.downloadUrl'
 
 #download file
-Write-Output "Downlod file to '$pathFileFromDownload'"
+Write-Output "Download file to '$pathFileFromDownload'"
 Invoke-WebRequest -Uri $downloadUrl -OutFile $pathFileFromDownload
 #endregion download file
